@@ -4,13 +4,13 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>SCANDI</title>
-    <link rel="stylesheet" href="css/normalize.css">
-    <link rel="stylesheet" href="css/style.min.css">
+    <link rel="stylesheet" href="css/normalize.css" type="text/css">
+    <link rel="stylesheet" href="css/style.min.css" type="text/css">
 </head>
 <body>
     <header class="page-header">
         <nav class="navigation">
-            <a class="logo" href="#hero-id">
+            <a class="logo" href="#promo-id">
                 <img src="img/logo.png" alt="Логотип SCANDI" width="26" height="25">
                 SCANDI
             </a>
@@ -19,19 +19,25 @@
                 <li class="navigation-item"><a class="navigation-link" href="#portfolio-id">Портфолио</a></li>
                 <li class="navigation-item"><a class="navigation-link" href="#team-id">Команда</a></li>
                 <li class="navigation-item"><a class="navigation-link" href="#team-id">Как мы работаем</a></li>
-                <li class="navigation-item"><a class="navigation-link" href="#reviews-id">Отзывы клиентов</a></li>
+                <li class="navigation-item"><a class="navigation-link" href="#reviews-id">Отзывы</a></li>
                 <li class="navigation-item"><a class="navigation-link" href="#order-id">Оставить заявку</a></li>
             </ul>
-            <p class="contact"><a href="tel:+79818574624">+7(981)857-46-24</a></p>
+            <div class="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+            <a class="phone" href="tel:+79818574624">+7(981)857-46-24</a>
         </nav>
     </header>
     <main>
-        <section class="hero" id="hero-id">
+        <section class="promo" id="promo-id">
             <div class="container">
-                <h1 class="hero-title">Поможем сделать <br> вашу квартиру <br> уютнее</h1>
+                <h1 class="promo-title">Поможем сделать вашу квартиру  уютнее</h1>
                 <p class="caption">
-                    Подбираем текстиль, мебель и аксессуары <br> под ваш интерьер, 
-                    находим магазины <br> и помогаем организовать доставку
+                    <span>Подбираем текстиль, мебель и аксессуары </span>
+                    <span>под ваш интерьер, находим магазины </span>
+                    <span>и помогаем организовать доставку</span>
                 </p>
                 <a class="btn" href="#order-id">Оставить заявку</a>
             </div>
@@ -40,10 +46,10 @@
             <div class="container">
                 <h2 class="title-2">О НАС</h2>
                 <div class="content">
-                    <img class="content-img" src="img/shche_-team-PFi1uWHh2dQ-unsplash 1.png" alt="Композиция Ваза-яйцо">
+                    <img class="content-img" src="img/about.jpg" alt="Белая ваза с сухоцветами на обеденном столе, по бокам от которой стоят прозрачные бокалы">
                     <p class="caption">
                         Премиальный европейский текстиль - одно из самых главных напрвлений работы коллектива.
-                        Создавать неповторимые интерьеры для наших дорогих клиентов. уделяя внимание мельчайшим 
+                        Создавать неповторимые интерьеры для наших дорогих клиентов. уделяя внимание мельчайшим
                         деталям - вот то, что по-настоящему вдохновляет дизайнеров нашей студии.
                         <br> <br>
                         Наш коллектив сделает все, чтобы после сотрудничества с нами, Вам было приятно сказать:
@@ -53,10 +59,11 @@
             </div>
         </section>
         <section class="achievements">
+            <h2 class="visually-hidden">Наши преимущества</h2>
             <ul class="container">
-                <li class="achievements-item"><span class="hero-title">5</span><br> ЛЕТ ОПЫТА</li>
-                <li class="achievements-item"><span class="hero-title">100</span><br>ПРОЕКТОВ</li>
-                <li class="achievements-item"><span class="hero-title">10</span><br>НАГРАД</li>
+                <li class="achievements-item"><span class="promo-title">5</span><br> ЛЕТ ОПЫТА</li>
+                <li class="achievements-item"><span class="promo-title">100</span><br>ПРОЕКТОВ</li>
+                <li class="achievements-item"><span class="promo-title">10</span><br>НАГРАД</li>
             </ul>
         </section>
         <section class="portfolio" id="portfolio-id">
@@ -64,47 +71,46 @@
                 <h2 class="title-2">НАШИ РАБОТЫ</h2>
                 <ul class="gallery">
                     <li class="gallery-item small first">
-                        <a class="overlay" href="#">Маска</a>
                         <div class="details">
                             <h3 class="title-3">Квартира-студия <br>30 кв.м.</h3>
                             <p class="caption">
-                                В квартире были светлые стены и теплые цвета. Мы сконцентрировались на отсылках 
-                                к природе и сделали ребятам уютный интерьер, отсылающий к виллам островов Бали. 
+                                В квартире были светлые стены и теплые цвета. Мы сконцентрировались на отсылках
+                                к природе и сделали ребятам уютный интерьер, отсылающий к виллам островов Бали.
                             </p>
                         </div>
                     </li>
                     <li class="gallery-item large second">
-                        <a class="overlay" href="#">Маска</a>
                         <div class="details">
                             <h3 class="title-3">Квартира-студия <br>30 кв.м.</h3>
                             <p class="caption">
-                                В квартире были светлые стены и теплые цвета. Мы сконцентрировались на отсылках 
-                                к природе и сделали ребятам уютный интерьер, отсылающий к виллам островов Бали. 
+                                В квартире были светлые стены и теплые цвета. Мы сконцентрировались на отсылках
+                                к природе и сделали ребятам уютный интерьер, отсылающий к виллам островов Бали.
                             </p>
                         </div>
                     </li>
                     <li class="gallery-item large third">
-                        <a class="overlay" href="#">Маска</a>
                         <div class="details">
                             <h3 class="title-3">Квартира-студия <br>30 кв.м.</h3>
                             <p class="caption">
-                                В квартире были светлые стены и теплые цвета. Мы сконцентрировались на отсылках 
-                                к природе и сделали ребятам уютный интерьер, отсылающий к виллам островов Бали. 
+                                В квартире были светлые стены и теплые цвета. Мы сконцентрировались на отсылках
+                                к природе и сделали ребятам уютный интерьер, отсылающий к виллам островов Бали.
                             </p>
                         </div>
                     </li>
                     <li class="gallery-item small fourth">
-                        <a class="overlay" href="#">Маска</a>
                         <div class="details">
                             <h3 class="title-3">Квартира-студия <br>30 кв.м.</h3>
                             <p class="caption">
-                                В квартире были светлые стены и теплые цвета. Мы сконцентрировались на отсылках 
-                                к природе и сделали ребятам уютный интерьер, отсылающий к виллам островов Бали. 
+                                В квартире были светлые стены и теплые цвета. Мы сконцентрировались на отсылках
+                                к природе и сделали ребятам уютный интерьер, отсылающий к виллам островов Бали.
                             </p>
                         </div>
                     </li>
                 </ul>
-                <a class="see-more" href="#">Смотреть ещё --></a>
+                <a href="#" class="more">Смотреть ещё <svg width="61" height="16" viewBox="0 0 61 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M60.7071 8.70711C61.0976 8.31658 61.0976 7.68342 60.7071 7.29289L54.3432 0.928932C53.9526 0.538408 53.3195 0.538408 52.9289 0.928932C52.5384 1.31946 52.5384 1.95262 52.9289 2.34315L58.5858 8L52.9289 13.6569C52.5384 14.0474 52.5384 14.6805 52.9289 15.0711C53.3195 15.4616 53.9526 15.4616 54.3432 15.0711L60.7071 8.70711ZM0 9H60V7H0V9Z" fill="#533738" />
+                </svg>
+                </a>
             </div>
         </section>
         <section class="team" id="team-id">
@@ -113,7 +119,7 @@
                 <ul class="team-list">
                     <li class="team-item">
                         <figure class="team-item-image">
-                            <img src="img/image 61.png" width="320" height="249" alt="Это Маша">
+                            <img src="img/team-1.jpg" width="320" height="249" alt="Девушка с рыжими кудрями в голубой джинсовой рубашке">
                         </figure>
                         <p class="caption">
                             Это Маша, наш главный дизайнер. Она отвечает за дизайн-проект, приезжает к вам
@@ -122,16 +128,16 @@
                     </li>
                     <li class="team-item">
                         <figure class="team-item-image">
-                            <img src="img/image 59.png" width="320" height="249" alt="Это Саша">
+                            <img src="img/team-2.jpg" width="320" height="249" alt="Девушка с короткими светлыми волосами">
                         </figure>
                         <p class="caption">
-                            С нашим менеджером Сашей вы познакомитесь в первую очередь. 
+                            С нашим менеджером Сашей вы познакомитесь в первую очередь.
                             Она проконсультирует вас, соберет все документы и ответит на все вопросы.
                         </p>
                     </li>
                     <li class="team-item">
                         <figure class="team-item-image">
-                            <img src="img/image 58.png" width="320" height="249" alt="Это Катя">
+                            <img src="img/team-3.jpg" width="320" height="249" alt="Девушка с длинными светлыми волосами в серой кофте">
                         </figure>
                         <p class="caption">
                             Катя тоже занимается дизайном. Она всегда находит общий язык с клиентами
@@ -140,33 +146,24 @@
                     </li>
                 </ul>
             </div>
-            <div class="container work">
+            <div class="process wide-container" id="process-list">
                 <h2 class="title-2">КАК МЫ РАБОТАЕМ</h2>
-                <ul class="work">
-                    <li class="work-item">
-                        <p class="work-num">1</p>                        
-                        <p class="caption">
-                            Знакомимся, выезжаем на объект, утверждаем концепцию, подписываем договор.
-                        </p>
+                <ul class="process-list">
+                    <li class="process-item">
+                        <p class="caption">Знакомимся, выезжаем
+                            на объект, утверждаем концепцию, подписывем договор.</p>
                     </li>
-                    <li class="work-item">
-                        <p class="work-num">2</p>
-                        <p class="caption">
-                            Подбираем мебель, текстиль, аксессуары. Делаем 3D-визуализацию.
-                        </p>
+                    <li class="process-item">
+                        <p class="caption">Подбираем мебель, текстиль, аксессуры. Делаем 3D-
+                            зуализацию.</p>
                     </li>
-                    <li class="work-item">
-                        <p class="work-num">3</p>                        
-                        <p class="caption">
-                            Находим нужные магазины, помогаем с доставкой и оплатой товаров.
-                        </p>
+                    <li class="process-item">
+                        <p class="caption">Находим нужные магазины, помогаем с доставкой
+                            и оплатой товаров.</p>
                     </li>
-                    <li class="work-item">
-                        <p class="work-num">4</p>                        
-                        <p class="caption">
-                            Воплощаем проект в жизнь: расставляем мебель и цветы, вешаем шторы,
-                            находим места для мелочей.
-                        </p>
+                    <li class="process-item">
+                        <p class="caption">Воплощаем проект в жизнь:
+                            расставляем мебель и цветы, вешаем шторы, находим места для мелочей</p>
                     </li>
                 </ul>
             </div>
@@ -174,12 +171,12 @@
         <section class="reviews" id="reviews-id">
             <h2 class="title-2">ОТЗЫВЫ</h2>
             <div class="container">
-                <button class="btn-arrow" type="button"><img src="img/Arrow-left.png" alt="Листаем влево"></button>
+                <button class="btn-arrow arrow-left" type="button"><img src="img/Arrow-left.png" alt="Листаем влево"></button>
                 <blockquote class="reviews-item">
                     <p class="caption">
                         "Восторг! Спасибо, за комфортную жизнь. Очень рада, что выбрала вашу студию для украшения своего дома.
                         <br> <br>
-                        Работа шла быстро, было очень приятно лобщаться и взаимодействовать с сотрудниками. Не ожидала,
+                        Работа шла быстро, было очень приятно общаться и взаимодействовать с сотрудниками. Не ожидала,
                         что это будет так легко!
                         <br><br>
                         Буду советовать и своим друзьям к вам обращаться!"
@@ -187,42 +184,45 @@
                     <cite class="reviews-author">Анна Беловская</cite>
                 </blockquote>
                 <ul class="reviews-img-list">
-                    <li class="reviews-img"><img src="img/Rectangle 141.png" width="407" alt="Зона гостиной"></li>
-                    <li class="reviews-img"><img src="img/Rectangle 134.png" width="407" alt="Зона кухни"></li>
+                    <li class="reviews-img"><img src="img/review-1.jpg" width="407" alt="Светлый интерьер гостинной с деревянной мебелью и черным диваном"></li>
+                    <li class="reviews-img"><img src="img/review-2.jpg" width="407" alt="Интерьер кухни с деревянными фасадами, на переднем плане белая барная стойка с пятью коричневыми высокими стульями"></li>
                 </ul>
-                <button class="btn-arrow" type="button"><img src="img/Arrow-right.png" alt="Листаем вправо"></button>
+                <button class="btn-arrow arrow-right" type="button"><img src="img/Arrow-left.png" alt="Листаем вправо"></button>
             </div>
         </section>
         <section class="order" id="order-id">
-            <div class="container">
-                <div class="wrap">
+            <div class="wide-container">
+                <div class="form-wrap">
                     <h2 class="title-2">ОСТАВИТЬ ЗАЯВКУ</h2>
                     <p class="caption">
                         Оставьте свои контакты. Менеджер перезвонит в удобное вам время и ответит на все вопросы.
                     </p>
-                    <form class="order-form" action="#" method="POST">
-                        <label for="name-id"> Ваше имя</label>
-                        <input type="text" name="Name" id="name-id" placeholder="Ваше имя" required>
-                        
-                        <label for="tel-id"> Введите телефон</label>
-                        <input type="tel" id="tel-id" placeholder="Введите телефон" pattern="[0-9]{11}" name="tel" required>
-                        
-                        <input type="submit" class="btn" value="Оставить заявку">
+                    <form class="form-action" action="#" method="POST">
+                        <p>
+                            <input type="text" class="text-input" id="name" name="name" required>
+                            <label for="name" class="input-label">Ваше имя</label>
+                        </p>
+                        <p>
+                            <input type="tel" class="text-input" id="phone" name="phone" required>
+                            <label for="phone" class="input-label">Введите телефон</label>
+                        </p>
+                        <button class="btn btn-submit" type="submit">Оставить заявку</button>
                     </form>
                 </div>
                 <div class="order-map">
-                    <script type="text/javascript" charset="utf-8" async src="https://api-maps.yandex.ru/services/constructor/1.0/js/?um=constructor%3Abb4756531daf9ba2936036133faff666adb1b60a2ccdff2c9fddc776996c9fbe&amp;width=100%25&amp;height=624&amp;lang=ru_RU&amp;scroll=false"></script>
+                    <img src="img/map.jpg" alt="Карта г. Санкт-петербург, ул. Большая Конюшенная, 19">
                 </div>
             </div>
         </section>
     </main>
     <footer class="footer-page">
-        <div class="container">
-            <p class="contact"><a href="tel:+79818574624">+7(981)857-46-24</a></p>
-            <p class="address">г.Санкт-Петербург, ул.Большая Конюшенная, 19</p>
-            <p class="ouner">ИП Королёва А.А.</p>
+        <div class="wide-container">
+            <a href="tel:+79818574624" class="phone">+7 (981) 857-46-24</a>
+            <p class="adress">г. Санкт-петербург,
+                <span>ул. Большая Конюшенная, 19</span></p>
+            <p class="copyright">ИП Королёва А.А.</p>
         </div>
-        
     </footer>
+    <script src="JS/menu.js"></script>
 </body>
 </html>

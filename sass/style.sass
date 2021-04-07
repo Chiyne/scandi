@@ -1,12 +1,14 @@
+*
+    box-sizing: border-box
+    margin: 0
+    padding: 0
+
+
 $f_sS: 18px
 $f_sM: 18px
 
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500&display=swap')
 
-*
-    box-sizing: border-box
-    margin: 0
-    padding: 0
 
 body
     font-family: 'Montserrat', sans-serif
@@ -21,33 +23,50 @@ img
     max-width: 100%
     height: auto
 
-a 
+a
     text-decoration: none
-    color: inherit
+    color: #533738
+    &:hover
+        color: #cc8b86
+    &:focus
+        color: #99544f
 
-
-li 
+li
     list-style: none
 
+.visually-hidden:not(:focus):not(:active)
+    position: absolute
+    overflow: hidden
+    clip: rect(0 0 0 0)
+    margin: -1px
+    padding: 0
+    width: 1px
+    height: 1px
+    border: 0
+    white-space: nowrap
+    clip-path: inset(100%)
+
 .container
-    width: 1100px
-    padding: 0 30px 
+    max-width: 1100px
+    padding: 0 30px
     margin: auto
-    padding-top: 65px
-    padding-bottom: 65px
+
+.wide-container
+    margin: 0 auto
+    max-width: 1200px
+    padding: 0
 
 .page-header
-    position: relative
-    display: flex
-    justify-content: center
-.navigation
     position: absolute
-    top: 0
-    width: 1200px
+    width: 100%
+
+.navigation
+    max-width: 1200px
+    margin: 0 auto
     display: flex
     justify-content: space-between
     align-items: center
-    margin-top: 36px
+    padding-top: 36px
     font-size: 16px
     &-list
         display: flex
@@ -57,82 +76,100 @@ li
         display: block
         margin: 5px 10px
         padding: 0 5px
-        &:hover
-            box-shadow: 0 5px 5px #ffffff, inset 0 -10px 5px #ffffff, -5px 10px 5px #ffffff, 5px 10px 5px #ffffff
+    @media screen and ( max-width: 1050px)
+        li:nth-child(4)
+            display: none
+    @media screen and ( max-width: 850px)
+        li:nth-child(5)
+            display: none
+    .hamburger
+        display: none
     .logo
         position: relative
+        padding-left: 25px
         img
             position: absolute
             top: -5px
-            left: -25px
+            left: 0px
     .logo-item
         margin: auto 0
 
 .btn
-    width: 240px
-    height: 60px
+    width: 320px
+    height: 80px
     background-color: #cc8b86
     text-align: center
     position: relative
     display: block
-    line-height: 55px
+    line-height: 75px
     font-size: 20px
     color: #533738
+    border: none
     &:hover
-        color: #ffffff
+        background-color: #ffffff
         box-shadow: 0 0 20px #ffffff
+        color: #cc8b86
 
 .title-2
     font-size: 40px
-    font-weight: 400   
+    font-weight: 400
     text-align: center
     margin: 0 0 40px
 
-// HERO 
+// HERO
 
-.hero
-    background: #f9eae1 url(../img/hero-bg.png) no-repeat center/cover 
+.promo
+    background: #ded7cb url(../img/promo.jpg) no-repeat center/cover
     .container
         display: flex
         flex-direction: column
         justify-content: center
+        padding-top: 150px
+        padding-bottom: 65px
         height: 100vh
-        padding-top: 80px
-        padding-bottom: 80px
-    
-.hero-title
+    .caption
+        width: 50%
+        span
+            white-space: nowrap
+
+.promo-title
     font-size: 50px
     line-height: 62px
     font-weight: 400
-    margin: 24px 0
+    margin: 0 0 21px
+    width: 50%
 
 //ABOUT-US
 
 .about-us
     background-color: #efe6e4
+    padding-top: 65px
+    padding-bottom: 20px
     .content
-        display: flex
-        &-img
-            margin-right: 65px
-    .container
-        padding-bottom: 20px
+        display: grid
+        grid-template-columns: 1fr 1fr
+        column-gap: 50px
+        align-items: center
+
 
 .achievements
     background-color: #8d7370
     color: #efe6e4
+    padding-top: 85px
+    padding-bottom: 80px
     .container
         display: flex
         justify-content: space-between
-        padding-top: 0
-        padding-bottom: 0
     &-item
         text-align: center
         font-size: 30px
         font-weight: 500
-        margin: 85px 0
+        margin: 10px 0
 
 .portfolio
     background-color: #efe6e4
+    padding-top: 65px
+    padding-bottom: 65px
     .title-2
         text-align: start
     .gallery
@@ -140,25 +177,22 @@ li
         grid-template-columns: repeat(12, 1fr)
         gap: 20px 30px
         padding: 0
+        .details
+            display: none
+            flex-direction: column
+            justify-content: center
+            padding: 10px
+            background-color: rgba(100, 72, 69, 0.8)
+            color: #fff
+            height: 100%
+            .title-3
+                text-align: center
+                font-size: 30px
+                font-weight: 500
         .gallery-item
             height: 450px
             position: relative
-            .details
-                display: none
-                flex-direction: column 
-                justify-content: center
-                padding: 10px
-                background-color: rgba(100, 72, 69, 0.8)
-                color: #fff
-                height: 100%
-                .title-3
-                    text-align: center
-                    font-size: 30px
-                    font-weight: 500
-            .overlay
-                position: absolute
-                font-size: 0
-            &:hover 
+            &:hover
                 .details
                     display: flex
         .small
@@ -166,58 +200,85 @@ li
         .large
             grid-column: span 7
         .first
-            background: url("../img/image 55.png") no-repeat center/cover
+            background: url("../img/portfolio-1.jpg") no-repeat center/cover
         .second
-            background: url("../img/Rectangle 134.png") no-repeat center/cover
+            background: url("../img/portfolio-2.jpg") no-repeat center/cover
         .third
-            background: url("../img/Rectangle 132.png") no-repeat center/cover
+            background: url("../img/portfolio-3.jpg") no-repeat center/cover
         .fourth
-            background: url("../img/image 56.png") no-repeat center/cover
-    .see-more
-        display: block
-        text-align: center
-        margin-top: 40px
-        
+            background: url("../img/portfolio-4.jpg") no-repeat center/cover
+.more
+    display: block
+    margin-top: 37px
+    text-align: center
+    font-weight: 500
+    font-size: 30px
+    line-height: 37px
+    &:hover path
+        fill: #cc8b86
+    &:focus path
+        fill: #99544f
+    & svg
+        margin-left: 10px
+
 // TEAM
 
 .team
     background-color: #e2c4ba
-    .container
-        padding-top: 50px
-        padding-bottom: 35px
+    padding-top: 50px
+    padding-bottom: 60px
     &-list
         display: grid
         grid-template-columns: 1fr 1fr 1fr
-        column-gap: 30px 
+        column-gap: 30px
+        margin-bottom: 18px
     &-item
         display: flex
         flex-direction: column
+        margin-bottom: 20px
     .caption
         margin: 10px 0 0
-    .container.work
-        padding: 0 0 80px 
-        .work
-            display: grid
-            grid-template-columns: 1fr 1fr 1fr 1fr
-            column-gap: 30px 
-            &-num
-                margin: 0 auto
-                text-align: center
-                line-height: 70px
-                font-size: 30px
-                font-weight: 500
-                width: 70px
-                height: 70px
-                color: white
-                border-radius: 50%
-                background-color: #8d7370
+
+.process
+    &-list
+        display: flex
+        flex-wrap: wrap
+        margin: 0
+        margin-top: 40px
+        padding: 0
+        list-style: none
+        counter-reset: section
+    &-item
+        display: flex
+        flex-direction: column
+        margin-bottom: 20px
+        width: 25%
         .caption
-            position: relative
             text-align: center
+    &-item::before
+        counter-increment: section
+        content: counter(section)
+        width: 70px
+        height: 70px
+        display: flex
+        justify-content: center
+        flex-shrink: 0
+        align-items: center
+        margin: 0 auto
+        margin-bottom: 20px
+        font-weight: 500
+        font-size: 30px
+        line-height: 30px
+        color: white
+        background-color: #8D7370
+        border-radius: 50%
+
+/* Стили для отзывов */
+
 .reviews
     background-color: #efe6e4
-    .title-2
-        padding-top: 65px
+    padding-top: 65px
+    padding-bottom: 65px
     .container
         display: grid
         grid-template-columns: 72px 1fr 1fr 72px
@@ -234,6 +295,12 @@ li
             align-self: center
             &:hover
                 box-shadow: 0 0 10px #cc8b86
+            &:focus
+                border: 2px solid #cc8b86
+                background-color: #99544f
+        .arrow-right img
+            transform: rotate(180deg)
+
     &-img:first-child
         margin-bottom: 24px
     &-author
@@ -242,42 +309,65 @@ li
 
 .order
     background-color: #8d7370
-    color: #efe6e4
-    .container
+    color: #ffffff
+    .wide-container
         display: grid
         grid-template-columns: 1fr 1fr
         column-gap: 20px
-        height: 624px
-        padding-top: 0
+        min-height: 624px
+        align-items: center
+
+    .form-wrap
+        padding: 50px 20px 50px 82px
+        @media screen and ( max-width: 1050px)
+            padding-left: 30px
+
     .title-2
         text-align: start
-        margin: 50px 0 24px
-    .order-form
-        display: flex
-        flex-direction: column
-        .btn
-            border: none
-            color: #533738
-            &:hover
-                color: #fff
-        label
-            display: none
-        input:not([type="submit"])
+    .form-action
+        padding-top: 14px
+        p
+            position: relative
+            margin: 0
+            margin-bottom: 24px
+        .text-input
+            display: block
+            padding-top: 10px
+            padding-bottom: 13px
             width: 100%
-            border: 0
-            border-bottom: 1px solid #ffffff
-            background: transparent 
-            color: #ffffff
-            margin: 30px 0
+            border: none
+            border-bottom: 1px solid white
+            background-color: transparent
+            color: white
+        .text-input:focus + .input-label, .text-input:valid:not(:placeholder-shown) + .input-label
+            bottom: 40px
+            transition: 0.2s ease-in
+        .input-label
+            position: absolute
+            bottom: 11px
+            left: 0
+            transition: 0.2s ease-in
+
 
 .footer-page
     background-color: #efe6e4
-    .container
-        display: flex 
-        padding: 35px 0
-    .ouner
-        margin-left: auto
-    .contact
-        margin-right: 42px
+    .wide-container
+        display: flex
+        align-items: center
+        padding-top: 37px
+        padding-bottom: 37px
+    .phone
+        font-size: 18px
+        line-height: 30px
+        white-space: nowrap
+    .adress
+        margin: 0 auto 0 42px
+        span
+            white-space: nowrap
 
+    .copyright
+        margin: 0
+        white-space: nowrap
+
+@import "media"
 
