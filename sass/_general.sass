@@ -86,20 +86,52 @@ li
 
 
 .btn
-    width: 280px
-    height: 80px
-    background-color: #cc8b86
-    text-align: center
     position: relative
     display: block
-    line-height: 75px
+    width: 280px
+    height: 80px
+    text-align: center
     font-size: $f_sL
-    color: #533738
+    line-height: 75px
+    background-color: #cc8b86
     border: none
+    color: #533738
     &:hover
         background-color: #ffffff
         box-shadow: 0 0 20px #ffffff
         color: #cc8b86
+.btn-arrow
+    width: 72px
+    height: 72px
+    padding: 0
+    align-self: center
+    border-radius: 50%
+    border: none
+    background-color: #cc8b86
+    &:hover
+        box-shadow: 0 0 10px #cc8b86
+    &:focus
+        border: 2px solid #cc8b86
+        background-color: #99544f
+    &_right .arrow
+        transform: rotate(180deg)
+
+.up-button
+    display: none
+    position: fixed
+    z-index: 1
+    bottom: 75px
+    right: 20px
+    justify-content: center
+    align-items: center
+    cursor: pointer
+    .arrow
+        width: 33px
+        height: 16px
+        transform: rotate(90deg)
+    &_shown
+        display: flex
+
 .title
     font-size: 50px
     line-height: 62px
@@ -278,22 +310,6 @@ li
         text-transform: uppercase
     &__img:first-child
         margin-bottom: 24px
-
-.btn-arrow
-    width: 72px
-    height: 72px
-    border-radius: 50%
-    border: none
-    background-color: #cc8b86
-    padding: 0
-    align-self: center
-    &:hover
-        box-shadow: 0 0 10px #cc8b86
-    &:focus
-        border: 2px solid #cc8b86
-        background-color: #99544f
-    &_right img
-        transform: rotate(180deg)
 
 .order
     background-color: #8d7370
