@@ -1,8 +1,13 @@
 @media screen and ( max-width: 767px)
 
-    .title-2
+    .subtitle
         font-size: 34px
         margin-bottom: 20px
+    .page-header
+        &__logo
+            order: 1
+        &__phone
+            order: 2
 
     .navigation
         position: fixed
@@ -12,7 +17,7 @@
         padding-top: 10px
         border-bottom: 1px solid white
         background-color: rgba(255, 255, 255, 0.5)
-        &-list
+        &__list
             position: fixed
             top: 0
             left: -100%
@@ -25,14 +30,14 @@
             margin: 0
             background-color: rgba(255, 255, 255, .9)
             transition: 0.5s all
-            &-active
+            &_active
                 left: 0
-        &-item
+        &__item
             flex-grow: 1
             width: 100%
-        li:nth-child(4), li:nth-child(5)
-            display: block
-        &-link
+            &:nth-child(4), &:nth-child(5)
+                display: block
+        &__link
             display: block
             width: 100%
             height: 100%
@@ -40,52 +45,47 @@
             font-size: 24px
             padding: 0
             margin: 0
-        .logo
-            order: 1
-        .phone
-            order: 2
 
-        .hamburger
-            order: 3
+    .hamburger
+        order: 3
+        display: block
+        width: 46px
+        height: 38px
+        padding: 10px
+        &__item
             display: block
-            width: 46px
-            height: 38px
-            padding: 10px
-            span
-                display: block
-                height: 3px
-                width: 100%
-                background-color: #E8C300
-                margin-bottom: 3px
-                transition: 0.5s all
-            &-active
-                span
-                    margin-bottom: -3px
-                    &:nth-child(1)
-                        transform: translateY(3px) rotate(-45deg)
-                    &:nth-child(2)
-                        display: none
-                    &:nth-child(3)
-                        transform: translateY(3px) rotate(45deg)
+            height: 3px
+            width: 100%
+            background-color: #E8C300
+            margin-bottom: 3px
+            transition: 0.5s all
+        &_active
+            .hamburger__item
+                margin-bottom: -3px
+                &:nth-child(1)
+                    transform: translateY(3px) rotate(-45deg)
+                &:nth-child(2)
+                    display: none
+                &:nth-child(3)
+                    transform: translateY(3px) rotate(45deg)
     /*Стили для Промо*/
     .promo, .about-us, .achievements, .portfolio, .team, .reviews, .order
         padding: 50px 20px 20px
-        .container
+        &__container
             padding: 0
 
     .promo
         height: 100vh
-        .container
+        &__container
             align-items: center
             text-align: center
             height: 100%
             justify-content: space-around
-
         .caption
             width: 100%
-            span
+            &__item
                 white-space: normal
-        &-title
+        &__title
             width: 100%
             font-size: 40px
             line-height: 52px
@@ -95,89 +95,89 @@
     .about-us
         .content
             display: block
-            &-img
+            &__img
                 display: none
 
     .achievements
         padding-top: 20px
-        .container
+        &__container
             flex-direction: column
             align-items: center
-
+    //PORTFOLIO
     .portfolio
-        .gallery
-            display: block
-            &-item
-                margin-bottom: 10px
-
-            .details
-                display: flex
-                background-color: transparent
-                color: #533738
-                text-shadow: 0 0 8px #ffffff
-        .title-2
+        &__subtitle
             text-align: center
-        .more
-            font-weight: 400
-            margin-top: 20px
-
-    .team
-        &-list
-            display: block
-            text-align: center
+    .gallery
+        display: block
+        &__item
+            margin-bottom: 10px
+    .details
+        display: flex
+        background-color: transparent
+        color: #533738
+        text-shadow: 0 0 8px #ffffff
+    .more
+        font-weight: 400
+        margin-top: 20px
+    //TEAM
+    .team__list
+        display: block
+        text-align: center
 
     .process
         padding-top: 50px
-        &-item
+        &__item
             flex-direction: row
             width: 100%
-            .caption
-                margin-left: 10px
-        &-item::before
-            margin: auto auto auto 0
-
+            &::before
+                margin: auto auto auto 0
+        &__caption
+            margin-left: 10px
+    //REVIEWS
     .reviews
-        .container
+        &__container
             grid-template-columns: 1fr 1fr
             gap: 20px 0
             justify-items: center
-        &-img-list
+        &__img-list
             order: 1
             grid-column: span 2
-        &-item
+        &__item
             order: 2
             grid-column: span 2
-        .arrow-left
+    .btn-arrow
+        &_left
             order: 3
             justify-self: start
-        .arrow-right
+        &_right
             order: 4
             justify-self: end
-
+    //ORDER
     .order
-        .wide-container
+        &__wide-container
             grid-template-columns: 1fr
             row-gap: 20px
             justify-items: center
-        .title-2
-            text-align: center
-        .btn
-            margin: 0 auto
-        .form-wrap
             padding: 0
-        .order-map
+        &__subtitle
+            text-align: center
+        &__form
+            padding: 0
+        &__map
             max-width: 400px
+    .btn_submit
+        margin: 0 auto
 
     .footer-page
-        .wide-container
+        &__wide-container
             padding: 20px 10px
             flex-direction: column
-        .phone
+        &__phone
             order: 1
-        .copyright
+        &__copyright
             order: 2
             margin: 10px
-        .adress
+        &__adress
             order: 3
             text-align: center
             margin: 0

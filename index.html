@@ -4,49 +4,61 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>SCANDI</title>
-    <link rel="stylesheet" href="css/normalize.css" type="text/css">
-    <link rel="stylesheet" href="css/style.min.css" type="text/css">
+    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="css/style.min.css">
 </head>
 <body>
     <header class="page-header">
         <nav class="navigation">
-            <a class="logo" href="#promo-id">
-                <img src="img/logo.png" alt="Логотип SCANDI" width="26" height="25">
+            <a class="page-header__logo" href="#promo-id">
+                <img class="page-header__logo-img" src="img/logo.png" alt="Логотип SCANDI" width="26" height="25">
                 SCANDI
             </a>
-            <ul class="navigation-list">
-                <li class="navigation-item"><a class="navigation-link" href="#about-us-id">О компании</a></li>
-                <li class="navigation-item"><a class="navigation-link" href="#portfolio-id">Портфолио</a></li>
-                <li class="navigation-item"><a class="navigation-link" href="#team-id">Команда</a></li>
-                <li class="navigation-item"><a class="navigation-link" href="#team-id">Как мы работаем</a></li>
-                <li class="navigation-item"><a class="navigation-link" href="#reviews-id">Отзывы</a></li>
-                <li class="navigation-item"><a class="navigation-link" href="#order-id">Оставить заявку</a></li>
+            <ul class="navigation__list">
+                <li class="navigation__item">
+                    <a class="navigation__link" href="#about-us-id">О компании</a>
+                </li>
+                <li class="navigation__item">
+                    <a class="navigation__link" href="#portfolio-id">Портфолио</a>
+                </li>
+                <li class="navigation__item">
+                    <a class="navigation__link" href="#team-id">Команда</a>
+                </li>
+                <li class="navigation__item">
+                    <a class="navigation__link" href="#team-id">Как мы работаем</a>
+                </li>
+                <li class="navigation__item">
+                    <a class="navigation__link" href="#reviews-id">Отзывы</a>
+                </li>
+                <li class="navigation__item">
+                    <a class="navigation__link" href="#order-id">Оставить заявку</a>
+                </li>
             </ul>
             <div class="hamburger">
-                <span></span>
-                <span></span>
-                <span></span>
+                <span class="hamburger__item"></span>
+                <span class="hamburger__item"></span>
+                <span class="hamburger__item"></span>
             </div>
-            <a class="phone" href="tel:+79818574624">+7(981)857-46-24</a>
+            <a class="page-header__phone" href="tel:+79818574624">+7(981)857-46-24</a>
         </nav>
     </header>
     <main>
         <section class="promo" id="promo-id">
-            <div class="container">
-                <h1 class="promo-title">Поможем сделать вашу квартиру  уютнее</h1>
+            <div class="container promo__container">
+                <h1 class="title promo__title">Поможем сделать вашу квартиру  уютнее</h1>
                 <p class="caption">
-                    <span>Подбираем текстиль, мебель и аксессуары </span>
-                    <span>под ваш интерьер, находим магазины </span>
-                    <span>и помогаем организовать доставку</span>
+                    <span class="caption__item">Подбираем текстиль, мебель и аксессуары </span>
+                    <span class="caption__item">под ваш интерьер, находим магазины </span>
+                    <span class="caption__item">и помогаем организовать доставку</span>
                 </p>
                 <a class="btn" href="#order-id">Оставить заявку</a>
             </div>
         </section>
         <section class="about-us" id="about-us-id">
-            <div class="container">
-                <h2 class="title-2">О НАС</h2>
+            <div class="container about-us__container">
+                <h2 class="subtitle">О НАС</h2>
                 <div class="content">
-                    <img class="content-img" src="img/about.jpg" alt="Белая ваза с сухоцветами на обеденном столе, по бокам от которой стоят прозрачные бокалы">
+                    <img class="content__img" src="img/about.jpg" alt="Белая ваза с сухоцветами на обеденном столе, по бокам от которой стоят прозрачные бокалы">
                     <p class="caption">
                         Премиальный европейский текстиль - одно из самых главных напрвлений работы коллектива.
                         Создавать неповторимые интерьеры для наших дорогих клиентов. уделяя внимание мельчайшим
@@ -60,46 +72,55 @@
         </section>
         <section class="achievements">
             <h2 class="visually-hidden">Наши преимущества</h2>
-            <ul class="container">
-                <li class="achievements-item"><span class="promo-title">5</span><br> ЛЕТ ОПЫТА</li>
-                <li class="achievements-item"><span class="promo-title">100</span><br>ПРОЕКТОВ</li>
-                <li class="achievements-item"><span class="promo-title">10</span><br>НАГРАД</li>
+            <ul class="container achievements__container">
+                <li class="achievements__item">
+                    <span class="title">5</span>
+                    <br> ЛЕТ ОПЫТА
+                </li>
+                <li class="achievements__item">
+                    <span class="title">100</span>
+                    <br>ПРОЕКТОВ
+                </li>
+                <li class="achievements__item">
+                    <span class="title">10</span>
+                    <br>НАГРАД
+                </li>
             </ul>
         </section>
         <section class="portfolio" id="portfolio-id">
-            <div class="container">
-                <h2 class="title-2">НАШИ РАБОТЫ</h2>
+            <div class="container portfolio__container">
+                <h2 class="subtitle portfolio__subtitle">НАШИ РАБОТЫ</h2>
                 <ul class="gallery">
-                    <li class="gallery-item small first">
+                    <li class="gallery__item gallery__item_small gallery__item_first">
                         <div class="details">
-                            <h3 class="title-3">Квартира-студия <br>30 кв.м.</h3>
+                            <h3 class="details__header">Квартира-студия <br>30 кв.м.</h3>
                             <p class="caption">
                                 В квартире были светлые стены и теплые цвета. Мы сконцентрировались на отсылках
                                 к природе и сделали ребятам уютный интерьер, отсылающий к виллам островов Бали.
                             </p>
                         </div>
                     </li>
-                    <li class="gallery-item large second">
+                    <li class="gallery__item gallery__item_large gallery__item_second">
                         <div class="details">
-                            <h3 class="title-3">Квартира-студия <br>30 кв.м.</h3>
+                            <h3 class="details__header">Квартира-студия <br>30 кв.м.</h3>
                             <p class="caption">
                                 В квартире были светлые стены и теплые цвета. Мы сконцентрировались на отсылках
                                 к природе и сделали ребятам уютный интерьер, отсылающий к виллам островов Бали.
                             </p>
                         </div>
                     </li>
-                    <li class="gallery-item large third">
+                    <li class="gallery__item gallery__item_large gallery__item_third">
                         <div class="details">
-                            <h3 class="title-3">Квартира-студия <br>30 кв.м.</h3>
+                            <h3 class="details__header">Квартира-студия <br>30 кв.м.</h3>
                             <p class="caption">
                                 В квартире были светлые стены и теплые цвета. Мы сконцентрировались на отсылках
                                 к природе и сделали ребятам уютный интерьер, отсылающий к виллам островов Бали.
                             </p>
                         </div>
                     </li>
-                    <li class="gallery-item small fourth">
+                    <li class="gallery__item gallery__item_small gallery__item_fourth">
                         <div class="details">
-                            <h3 class="title-3">Квартира-студия <br>30 кв.м.</h3>
+                            <h3 class="details__header">Квартира-студия <br>30 кв.м.</h3>
                             <p class="caption">
                                 В квартире были светлые стены и теплые цвета. Мы сконцентрировались на отсылках
                                 к природе и сделали ребятам уютный интерьер, отсылающий к виллам островов Бали.
@@ -115,31 +136,31 @@
         </section>
         <section class="team" id="team-id">
             <div class="container">
-                <h2 class="title-2">КОМАНДА</h2>
-                <ul class="team-list">
-                    <li class="team-item">
-                        <figure class="team-item-image">
+                <h2 class="subtitle">КОМАНДА</h2>
+                <ul class="team__list">
+                    <li class="team__item">
+                        <figure class="team__image">
                             <img src="img/team-1.jpg" width="320" height="249" alt="Девушка с рыжими кудрями в голубой джинсовой рубашке">
                         </figure>
-                        <p class="caption">
+                        <p class="caption team__caption">
                             Это Маша, наш главный дизайнер. Она отвечает за дизайн-проект, приезжает к вам
                             домой, общается и помогает сделать вашу квартиру красивой и уютной.
                         </p>
                     </li>
-                    <li class="team-item">
-                        <figure class="team-item-image">
+                    <li class="team__item">
+                        <figure class="team__image">
                             <img src="img/team-2.jpg" width="320" height="249" alt="Девушка с короткими светлыми волосами">
                         </figure>
-                        <p class="caption">
+                        <p class="caption team__caption">
                             С нашим менеджером Сашей вы познакомитесь в первую очередь.
                             Она проконсультирует вас, соберет все документы и ответит на все вопросы.
                         </p>
                     </li>
-                    <li class="team-item">
-                        <figure class="team-item-image">
+                    <li class="team__item">
+                        <figure class="team__image">
                             <img src="img/team-3.jpg" width="320" height="249" alt="Девушка с длинными светлыми волосами в серой кофте">
                         </figure>
-                        <p class="caption">
+                        <p class="caption team__caption">
                             Катя тоже занимается дизайном. Она всегда находит общий язык с клиентами
                             и точно знает, как обустроить дом так, чтобы вам понравилось.
                         </p>
@@ -147,32 +168,40 @@
                 </ul>
             </div>
             <div class="process wide-container" id="process-list">
-                <h2 class="title-2">КАК МЫ РАБОТАЕМ</h2>
-                <ul class="process-list">
-                    <li class="process-item">
-                        <p class="caption">Знакомимся, выезжаем
-                            на объект, утверждаем концепцию, подписывем договор.</p>
+                <h2 class="subtitle">КАК МЫ РАБОТАЕМ</h2>
+                <ul class="process__list">
+                    <li class="process__item">
+                        <p class="caption process__caption">
+                            Знакомимся, выезжаем
+                            на объект, утверждаем концепцию, подписывем договор.
+                        </p>
                     </li>
-                    <li class="process-item">
-                        <p class="caption">Подбираем мебель, текстиль, аксессуры. Делаем 3D-
-                            зуализацию.</p>
+                    <li class="process__item">
+                        <p class="caption process__caption">
+                            Подбираем мебель, текстиль, аксессуры. Делаем 3D-
+                            зуализацию.
+                        </p>
                     </li>
-                    <li class="process-item">
-                        <p class="caption">Находим нужные магазины, помогаем с доставкой
-                            и оплатой товаров.</p>
+                    <li class="process__item">
+                        <p class="caption process__caption">
+                            Находим нужные магазины, помогаем с доставкой
+                            и оплатой товаров.
+                        </p>
                     </li>
-                    <li class="process-item">
-                        <p class="caption">Воплощаем проект в жизнь:
-                            расставляем мебель и цветы, вешаем шторы, находим места для мелочей</p>
+                    <li class="process__item">
+                        <p class="caption process__caption">
+                            Воплощаем проект в жизнь:
+                            расставляем мебель и цветы, вешаем шторы, находим места для мелочей
+                        </p>
                     </li>
                 </ul>
             </div>
         </section>
         <section class="reviews" id="reviews-id">
-            <h2 class="title-2">ОТЗЫВЫ</h2>
-            <div class="container">
-                <button class="btn-arrow arrow-left" type="button"><img src="img/Arrow-left.png" alt="Листаем влево"></button>
-                <blockquote class="reviews-item">
+            <h2 class="subtitle">ОТЗЫВЫ</h2>
+            <div class="container reviews__container">
+                <button class="btn-arrow btn-arrow_left" type="button"><img src="img/Arrow-left.png" alt="Листаем влево"></button>
+                <blockquote class="reviews__item">
                     <p class="caption">
                         "Восторг! Спасибо, за комфортную жизнь. Очень рада, что выбрала вашу студию для украшения своего дома.
                         <br> <br>
@@ -181,46 +210,48 @@
                         <br><br>
                         Буду советовать и своим друзьям к вам обращаться!"
                     </p>
-                    <cite class="reviews-author">Анна Беловская</cite>
+                    <cite class="reviews__author">Анна Беловская</cite>
                 </blockquote>
-                <ul class="reviews-img-list">
-                    <li class="reviews-img"><img src="img/review-1.jpg" width="407" alt="Светлый интерьер гостинной с деревянной мебелью и черным диваном"></li>
-                    <li class="reviews-img"><img src="img/review-2.jpg" width="407" alt="Интерьер кухни с деревянными фасадами, на переднем плане белая барная стойка с пятью коричневыми высокими стульями"></li>
+                <ul class="reviews__img-list">
+                    <li class="reviews__img"><img src="img/review-1.jpg" width="407" alt="Светлый интерьер гостинной с деревянной мебелью и черным диваном"></li>
+                    <li class="reviews__img"><img src="img/review-2.jpg" width="407" alt="Интерьер кухни с деревянными фасадами, на переднем плане белая барная стойка с пятью коричневыми высокими стульями"></li>
                 </ul>
-                <button class="btn-arrow arrow-right" type="button"><img src="img/Arrow-left.png" alt="Листаем вправо"></button>
+                <button class="btn-arrow btn-arrow_right" type="button"><img src="img/Arrow-left.png" alt="Листаем вправо"></button>
             </div>
         </section>
         <section class="order" id="order-id">
-            <div class="wide-container">
-                <div class="form-wrap">
-                    <h2 class="title-2">ОСТАВИТЬ ЗАЯВКУ</h2>
+            <div class="wide-container order__wide-container">
+
+                <div class="order__form">
+                    <h2 class="subtitle order__subtitle">ОСТАВИТЬ ЗАЯВКУ</h2>
                     <p class="caption">
                         Оставьте свои контакты. Менеджер перезвонит в удобное вам время и ответит на все вопросы.
                     </p>
-                    <form class="form-action" action="#" method="POST">
-                        <p>
-                            <input type="text" class="text-input" id="name" name="name" required>
-                            <label for="name" class="input-label">Ваше имя</label>
+                    <form class="order__action" action="#" method="POST">
+                        <p class="form-input">
+                            <input type="text" class="form-input__text" id="name" name="name" required>
+                            <label for="name" class="form-input__label">Ваше имя</label>
                         </p>
-                        <p>
-                            <input type="tel" class="text-input" id="phone" name="phone" required>
-                            <label for="phone" class="input-label">Введите телефон</label>
+                        <p class="form-input">
+                            <input type="tel" class="form-input__text" id="phone" name="phone" required>
+                            <label for="phone" class="form-input__label">Введите телефон</label>
                         </p>
-                        <button class="btn btn-submit" type="submit">Оставить заявку</button>
+                        <button class="btn btn_submit" type="submit">Оставить заявку</button>
                     </form>
                 </div>
-                <div class="order-map">
+
+                <div class="order__map">
                     <img src="img/map.jpg" alt="Карта г. Санкт-петербург, ул. Большая Конюшенная, 19">
                 </div>
             </div>
         </section>
     </main>
     <footer class="footer-page">
-        <div class="wide-container">
-            <a href="tel:+79818574624" class="phone">+7 (981) 857-46-24</a>
-            <p class="adress">г. Санкт-петербург,
+        <div class="wide-container footer-page__wide-container">
+            <a class="footer-page__phone" href="tel:+79818574624">+7 (981) 857-46-24</a>
+            <p class="footer-page__adress">г. Санкт-петербург,
                 <span>ул. Большая Конюшенная, 19</span></p>
-            <p class="copyright">ИП Королёва А.А.</p>
+            <p class="footer-page__copyright">ИП Королёва А.А.</p>
         </div>
     </footer>
     <script src="JS/menu.js"></script>
